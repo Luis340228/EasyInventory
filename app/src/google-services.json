@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1041176160587",
+    "project_id": "easyinventory-ec70a",
+    "storage_bucket": "easyinventory-ec70a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041176160587:android:fd4c623043fddf360760ce",
+        "android_client_info": {
+          "package_name": "com.tricode.easyinventory"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6uVwf42PvDy-D-P2zQAKp4mKaB8rVFVo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
