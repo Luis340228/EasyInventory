@@ -58,7 +58,7 @@ fun CategoryListScreen(navController: NavController, viewModel: InventoryViewMod
                             color = Color.White
                         )
                         IconButton(
-                            onClick = { navController.navigate("edit_category/${category.id}") } // 🔹 Navega a edición
+                            onClick = { navController.navigate("edit_category/${category.id}") }
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Edit,

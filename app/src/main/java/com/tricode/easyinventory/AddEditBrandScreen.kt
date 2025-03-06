@@ -73,7 +73,7 @@ fun AddEditBrandScreen(navController: NavController, viewModel: InventoryViewMod
                 Button(
                     onClick = {
                         brandId?.let {
-                            viewModel.deleteBrand(it) // Llamar a la función en el ViewModel
+                            viewModel.deleteBrand(it)
                             showDialog = false
                             navController.popBackStack()
                         }

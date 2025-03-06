@@ -86,7 +86,6 @@ fun AddEditProductScreen(navController: NavController, viewModel: InventoryViewM
                 itemLabel = { it.name }
             )
 
-            // ✅ Cantidad (Solo números)
             OutlinedTextField(
                 value = quantity,
                 onValueChange = { if (it.all { char -> char.isDigit() }) quantity = it },
@@ -94,10 +93,8 @@ fun AddEditProductScreen(navController: NavController, viewModel: InventoryViewM
                 keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number)
             )
 
-            // ✅ Selector de Fecha de Caducidad
             DatePickerField(context, expirationDate) { selectedDate -> expirationDate = selectedDate }
 
-            // ✅ Precio (Solo números y punto decimal)
             OutlinedTextField(
                 value = price,
                 onValueChange = { if (it.all { char -> char.isDigit() || char == '.' }) price = it },
@@ -167,7 +164,6 @@ fun AddEditProductScreen(navController: NavController, viewModel: InventoryViewM
     }
 }
 
-// ✅ Composable para Selector de Fecha
 @Composable
 fun DatePickerField(context: Context, selectedDate: String, onDateSelected: (String) -> Unit) {
     var showDatePicker by remember { mutableStateOf(false) }

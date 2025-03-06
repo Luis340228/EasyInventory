@@ -5,7 +5,7 @@ data class SaleRecord(
     val productId: String = "",
     val productName: String = "",
     val quantitySold: Int = 0,
-    val totalPrice: Double = 0.0, // 🔹 Nuevo campo para almacenar el total de la venta
+    val totalPrice: Double = 0.0,
     val timestamp: Long = System.currentTimeMillis()
 )
 

@@ -58,7 +58,7 @@ fun BrandListScreen(navController: NavController, viewModel: InventoryViewModel)
                             color = Color.White
                         )
                         IconButton(
-                            onClick = { navController.navigate("edit_brand/${brand.id}") } // 🔹 Navega a edición
+                            onClick = { navController.navigate("edit_brand/${brand.id}") }
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Edit,
@@ -94,7 +94,7 @@ fun BrandItem(brand: Brand, onEdit: () -> Unit) {
                 style = MaterialTheme.typography.titleMedium,
                 color = Color.White
             )
-            IconButton(onClick = onEdit) { // 🔹 Icono de edición
+            IconButton(onClick = onEdit) {
                 Icon(
                     imageVector = Icons.Default.Edit,
                     contentDescription = "Editar",

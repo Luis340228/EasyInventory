@@ -1,6 +1,5 @@
 package com.tricode.easyinventory
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -78,24 +77,6 @@ fun ProviderListScreen(navController: NavController, viewModel: InventoryViewMod
                     }
                 }
             }
-        }
-    }
-}
-
-
-@Composable
-fun ProviderItem(provider: Provider) {
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(8.dp),
-        shape = RoundedCornerShape(12.dp),
-        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(0xFF652C12))
-    ) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Text(text = "Nombre: ${provider.name}", style = MaterialTheme.typography.titleMedium, color = Color.White)
-            Text(text = "Contacto: ${provider.contact}", style = MaterialTheme.typography.bodyMedium, color = Color.White)
         }
     }
 }

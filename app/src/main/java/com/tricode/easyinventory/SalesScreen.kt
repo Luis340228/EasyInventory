@@ -44,7 +44,7 @@ fun SalesScreen(navController: NavController, viewModel: InventoryViewModel) {
                 selectedItem = selectedProduct,
                 onItemSelected = { selectedProduct = it },
                 modifier = Modifier.fillMaxWidth(),
-                itemLabel = { it.name } // Para asegurarse de que muestra el nombre del producto
+                itemLabel = { it.name }
             )
 
 

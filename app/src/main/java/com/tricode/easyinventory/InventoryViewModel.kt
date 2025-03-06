@@ -7,18 +7,15 @@ import android.content.Context
 import android.os.Build
 import android.util.Log
 import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.FirebaseApp
-import com.google.firebase.Timestamp
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Calendar
-import java.util.Date
 import java.util.Locale
 import java.util.UUID
 import com.google.firebase.messaging.FirebaseMessaging
@@ -119,7 +116,7 @@ class InventoryViewModel(application: Application) : AndroidViewModel(applicatio
                 val expirationDate = Calendar.getInstance().apply {
                     time = sdf.parse(product.expirationDate) ?: return@filter false
                 }
-                expirationDate.before(currentDate) // 🔹 Si ya caducó y aún tiene stock
+                expirationDate.before(currentDate)
             } catch (e: Exception) {
                 false
             }
@@ -135,7 +132,6 @@ class InventoryViewModel(application: Application) : AndroidViewModel(applicatio
         val context = getApplication<Application>().applicationContext
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
-        // Crear el canal de notificación si es Android 8.0 o superior
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 "inventory_channel",
@@ -180,7 +176,7 @@ class InventoryViewModel(application: Application) : AndroidViewModel(applicatio
                     val expirationDate = Calendar.getInstance().apply {
                         time = sdf.parse(product.expirationDate) ?: return@filter false
                     }
-                    expirationDate in currentDate..sevenDaysLater // Solo productos que vencen en los próximos 7 días
+                    expirationDate in currentDate..sevenDaysLater
                 } catch (e: Exception) {
                     false
                 }

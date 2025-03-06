@@ -1,6 +1,5 @@
 package com.tricode.easyinventory
 
-import android.util.Log
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -10,7 +9,6 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
@@ -82,7 +80,7 @@ fun ProductItem(product: Product, onEdit: (String) -> Unit) {
                     Text(text = "Precio: $${product.price}", style = MaterialTheme.typography.bodyMedium, color = Color.White)
                 }
                 IconButton(
-                    onClick = { onEdit(product.id) } // Llama a la función de edición con el ID del producto
+                    onClick = { onEdit(product.id) }
                 ) {
                     Icon(Icons.Filled.Edit, contentDescription = "Editar Producto", tint = Color.White)
                 }

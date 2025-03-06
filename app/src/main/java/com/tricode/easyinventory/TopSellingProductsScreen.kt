@@ -39,28 +39,10 @@ fun TopSellingProductsScreen(navController: NavController, viewModel: InventoryV
                     Column(modifier = Modifier.padding(16.dp)) {
                         Text(text = "Producto: ${product.productName}", style = MaterialTheme.typography.titleMedium, color = Color.White)
                         Text(text = "Unidades Vendidas: ${product.totalQuantitySold}", style = MaterialTheme.typography.bodyMedium, color = Color.White)
-                        Text(text = "Total Generado: $${product.totalRevenue}", style = MaterialTheme.typography.bodyMedium, color = Color.White) // 🔹 Mostrar total de dinero vendido
+                        Text(text = "Total Generado: $${product.totalRevenue}", style = MaterialTheme.typography.bodyMedium, color = Color.White)
                     }
                 }
             }
-        }
-    }
-}
-
-
-@Composable
-fun SaleItem(sale: SaleRecord) {
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(8.dp),
-        shape = RoundedCornerShape(12.dp),
-        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(0xFF652C12))
-    ) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Text(text = "Producto: ${sale.productName}", style = MaterialTheme.typography.titleMedium, color = Color.White)
-            Text(text = "Unidades Vendidas: ${sale.quantitySold}", style = MaterialTheme.typography.bodyMedium, color = Color.White)
         }
     }
 }
