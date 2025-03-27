@@ -228,7 +228,7 @@ class InventoryViewModel(application: Application) : AndroidViewModel(applicatio
                 productId = product.id,
                 productName = product.name,
                 quantitySold = quantitySold,
-                totalPrice = product.price * quantitySold, // 🔹 Guardamos el total al momento de la venta
+                totalPrice = product.price * quantitySold,
                 timestamp = System.currentTimeMillis()
             )
 
@@ -240,7 +240,6 @@ class InventoryViewModel(application: Application) : AndroidViewModel(applicatio
                     Log.e("Firestore", "Error al registrar venta", e)
                 }
 
-            // Actualizar stock en la base de datos
             val newStock = product.quantity - quantitySold
             db.collection("products").document(product.id)
                 .update("quantity", newStock)

@@ -72,35 +72,3 @@ fun BrandListScreen(navController: NavController, viewModel: InventoryViewModel)
         }
     }
 }
-
-
-@Composable
-fun BrandItem(brand: Brand, onEdit: () -> Unit) {
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(8.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(0xFF652C12))
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text(
-                text = "Marca: ${brand.name}",
-                style = MaterialTheme.typography.titleMedium,
-                color = Color.White
-            )
-            IconButton(onClick = onEdit) {
-                Icon(
-                    imageVector = Icons.Default.Edit,
-                    contentDescription = "Editar",
-                    tint = Color.White
-                )
-            }
-        }
-    }
-}
