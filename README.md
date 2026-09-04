@@ -68,7 +68,7 @@ También se envían notificaciones locales al abrir la app si se detectan produc
   * Gestión de productos con proveedores, categorías y marcas.
   * Registro y control de ventas con actualización automática del inventario.
   * Notificaciones automáticas sobre productos por caducar y caducados.
-  * Notificaciones automáticas sobre productos por caducar y caducados. Listado de los productos más vendidos con estadísticas.
+  * Notificaciones automáticas sobre productos por caducar y caducados. Listado de los productos más vendidos con estadísticas....
   * Notificaciones automáticas sobre productos por caducar y caducados. Diseño intuitivo con Jetpack Compose.
 
 9. Licencia y Créditos
