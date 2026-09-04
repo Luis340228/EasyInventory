@@ -72,4 +72,4 @@ También se envían notificaciones locales al abrir la app si se detectan produc
   * Notificaciones automáticas sobre productos por caducar y caducados. Diseño intuitivo con Jetpack Compose.
 
 9. Licencia y Créditos
-Este proyecto fue desarrollado por Tricode como parte de un sistema de gestión de inventario en Android.
+Este proyecto fue desarrollado por Tricode como parte de un sistema de gestión de inventario en Android.......etc
